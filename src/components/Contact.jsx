@@ -14,7 +14,7 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     toast({
       title: "Message Sent!",
@@ -23,38 +23,36 @@ const Contact = () => {
     setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
+    <section id="contact" className="py-12 sm:py-20 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-sm sm:text-base px-4">
             I'm always open to discussing new opportunities, projects, or collaborations.
             Feel free to reach out!
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="space-y-6">
-            <Card className="p-6 glass-card border-border/50 hover-lift">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
+          <div className="space-y-4 sm:space-y-6">
+            <Card className="p-4 sm:p-6 glass-card border-border/50 hover-lift">
               <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-accent">
-                  <Mail className="h-6 w-6 text-white" />
+                <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-accent shrink-0">
+                  <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg">Email</h3>
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-base sm:text-lg">Email</h3>
                   <a
                     href="mailto:gaurav@example.com"
-                    className="text-primary hover:underline"
+                    className="text-primary hover:underline text-sm sm:text-base break-all"
                   >
                     gaurav@example.com
                   </a>
@@ -62,18 +60,18 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 glass-card border-border/50 hover-lift">
+            <Card className="p-4 sm:p-6 glass-card border-border/50 hover-lift">
               <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-accent">
-                  <Linkedin className="h-6 w-6 text-white" />
+                <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-accent shrink-0">
+                  <Linkedin className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg">LinkedIn</h3>
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-base sm:text-lg">LinkedIn</h3>
                   <a
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-primary hover:underline text-sm sm:text-base break-all"
                   >
                     linkedin.com/in/gaurav
                   </a>
@@ -81,18 +79,18 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 glass-card border-border/50 hover-lift">
+            <Card className="p-4 sm:p-6 glass-card border-border/50 hover-lift">
               <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-accent">
-                  <Github className="h-6 w-6 text-white" />
+                <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-accent shrink-0">
+                  <Github className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg">GitHub</h3>
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-base sm:text-lg">GitHub</h3>
                   <a
                     href="https://github.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-primary hover:underline text-sm sm:text-base break-all"
                   >
                     github.com/gaurav
                   </a>
@@ -101,8 +99,8 @@ const Contact = () => {
             </Card>
           </div>
 
-          <Card className="p-8 glass-card border-border/50">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <Card className="p-6 sm:p-8 glass-card border-border/50">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Name

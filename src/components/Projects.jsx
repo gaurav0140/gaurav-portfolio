@@ -47,26 +47,26 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-secondary/30">
+    <section id="projects" className="py-12 sm:py-20 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-sm sm:text-base px-4">
             A showcase of my recent work demonstrating technical expertise and problem-solving abilities
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <Card
               key={index}
               className="group overflow-hidden glass-card hover-lift border-border/50 bg-card/50 backdrop-blur-sm"
             >
               {/* Project Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 sm:h-64 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <img
                   src={project.image}
@@ -76,12 +76,12 @@ const Projects = () => {
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${project.gradient}`} />
               </div>
               
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-foreground/70 mb-4 leading-relaxed">
+                <p className="text-foreground/70 mb-4 leading-relaxed text-sm sm:text-base">
                   {project.description}
                 </p>
 
@@ -89,18 +89,18 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
+                      className="px-2 sm:px-3 py-1 text-xs sm:text-sm rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <Button
                     variant="outline"
                     size="sm"
-                    className="group/btn hover:bg-primary hover:text-primary-foreground border-border hover:border-primary transition-all"
+                    className="group/btn hover:bg-primary hover:text-primary-foreground border-border hover:border-primary transition-all w-full sm:w-auto"
                     asChild
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -110,7 +110,7 @@ const Projects = () => {
                   </Button>
                   <Button
                     size="sm"
-                    className="bg-gradient-to-r from-primary to-accent hover:opacity-90 shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-glow)] transition-all"
+                    className="bg-gradient-to-r from-primary to-accent hover:opacity-90 shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-glow)] transition-all w-full sm:w-auto"
                     asChild
                   >
                     <a href={project.live} target="_blank" rel="noopener noreferrer">

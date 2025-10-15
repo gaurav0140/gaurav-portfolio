@@ -20,7 +20,7 @@ const Navbar = () => {
     document.documentElement.classList.toggle("dark");
   };
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
     setIsMobileMenuOpen(false);
@@ -112,7 +112,7 @@ const Navbar = () => {
                 >
                   {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                 </Button>
-                <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90">
+                <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 flex-1 ml-4">
                   <Download className="mr-2 h-4 w-4" />
                   Resume
                 </Button>
