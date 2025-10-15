@@ -21,21 +21,21 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-12 sm:py-20 bg-secondary/30">
+    <section id="about" className="py-20 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
         </div>
 
-        <div className="grid lg:grid-cols-[350px_1fr] gap-8 sm:gap-12 items-center">
+        <div className="grid lg:grid-cols-[400px_1fr] gap-12 items-center">
           {/* Profile Image Section */}
-          <div className="flex justify-center lg:justify-start animate-scale-in order-1 lg:order-none">
+          <div className="flex justify-center lg:justify-start animate-scale-in">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-500 animate-glow" />
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-background shadow-[var(--shadow-large)]">
+              <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-background shadow-[var(--shadow-large)]">
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
                   alt="Gaurav - Software Engineer"
@@ -46,14 +46,14 @@ const About = () => {
           </div>
 
           {/* About Content */}
-          <div className="space-y-4 sm:space-y-6 animate-fade-in order-2 lg:order-none">
-            <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+          <div className="space-y-6 animate-fade-in">
+            <p className="text-lg text-foreground/80 leading-relaxed">
               I'm a passionate <span className="text-primary font-semibold">Software Engineer</span> and{" "}
               <span className="text-primary font-semibold">Frontend Developer</span> who loves building
               scalable, interactive, and user-focused web applications.
             </p>
             
-            <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            <p className="text-lg text-foreground/80 leading-relaxed">
               Currently focused on <span className="font-medium">React.js</span>,{" "}
               <span className="font-medium">Material UI</span>,{" "}
               <span className="font-medium">TypeScript</span>, and modern JavaScript frameworks.
@@ -63,13 +63,13 @@ const About = () => {
               built with React, React Router, and API integrations.
             </p>
 
-            <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            <p className="text-lg text-foreground/80 leading-relaxed">
               I'm also preparing for <span className="font-medium text-primary">Google Summer of Code (GSoC)</span>{" "}
               with the Open Healthcare Network, contributing to open-source projects that focus on global
               healthcare interoperability.
             </p>
 
-            <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            <p className="text-lg text-foreground/80 leading-relaxed">
               I'm eager to join a company like <span className="font-semibold gradient-text">Microsoft</span>{" "}
               where I can solve challenging problems, grow as a software engineer, and contribute to
               impactful products that make a difference in people's lives.
@@ -78,7 +78,7 @@ const About = () => {
         </div>
 
         {/* Highlights Section */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-12 sm:mt-16 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+        <div className="grid md:grid-cols-3 gap-6 mt-16 animate-fade-in-up"  style={{ animationDelay: "0.2s" }}>
           {highlights.map((item, index) => (
             <Card
               key={index}
@@ -90,12 +90,13 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-foreground/70 text-sm sm:text-base">{item.description}</p>
+                  <p className="text-foreground/70">{item.description}</p>
                 </div>
               </div>
             </Card>
           ))}
         </div>
+
       </div>
     </section>
   );

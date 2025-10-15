@@ -23,7 +23,7 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    const observerCallback = (entries) => {
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("in-view");
