@@ -30,7 +30,22 @@ const About = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[400px_1fr] gap-12 items-center">
+          {/* Profile Image Section */}
+          <div className="flex justify-center lg:justify-start animate-scale-in">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-500 animate-glow" />
+              <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-background shadow-[var(--shadow-large)]">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                  alt="Gaurav - Software Engineer"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* About Content */}
           <div className="space-y-6 animate-fade-in">
             <p className="text-lg text-foreground/80 leading-relaxed">
               I'm a passionate <span className="text-primary font-semibold">Software Engineer</span> and{" "}
@@ -60,26 +75,28 @@ const About = () => {
               impactful products that make a difference in people's lives.
             </p>
           </div>
-
-          <div className="grid gap-6 animate-scale-in">
-            {highlights.map((item, index) => (
-              <Card
-                key={index}
-                className="p-6 glass-card hover-lift border-border/50 group"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-accent group-hover:shadow-[var(--shadow-glow)] transition-shadow">
-                    <item.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-foreground/70">{item.description}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
         </div>
+
+        {/* Highlights Section */}
+        <div className="grid md:grid-cols-3 gap-6 mt-16 animate-fade-in-up"  style={{ animationDelay: "0.2s" }}>
+          {highlights.map((item, index) => (
+            <Card
+              key={index}
+              className="p-6 glass-card hover-lift border-border/50 group"
+            >
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-4 rounded-xl bg-gradient-to-br from-primary to-accent group-hover:shadow-[var(--shadow-glow)] transition-shadow">
+                  <item.icon className="h-8 w-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-foreground/70">{item.description}</p>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
       </div>
     </section>
   );

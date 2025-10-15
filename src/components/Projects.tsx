@@ -12,6 +12,7 @@ const Projects = () => {
       github: "https://github.com",
       live: "https://example.com",
       gradient: "from-blue-500 to-purple-500",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
     },
     {
       title: "Healthcare Dashboard",
@@ -21,6 +22,7 @@ const Projects = () => {
       github: "https://github.com",
       live: "https://example.com",
       gradient: "from-emerald-500 to-teal-500",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop",
     },
     {
       title: "E-Commerce Platform",
@@ -30,6 +32,7 @@ const Projects = () => {
       github: "https://github.com",
       live: "https://example.com",
       gradient: "from-orange-500 to-red-500",
+      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
     },
     {
       title: "Task Management App",
@@ -39,6 +42,7 @@ const Projects = () => {
       github: "https://github.com",
       live: "https://example.com",
       gradient: "from-indigo-500 to-blue-500",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
     },
   ];
 
@@ -59,9 +63,18 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group overflow-hidden glass-card hover-lift border-border/50"
+              className="group overflow-hidden glass-card hover-lift border-border/50 bg-card/50 backdrop-blur-sm"
             >
-              <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
+              {/* Project Image */}
+              <div className="relative h-64 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${project.gradient}`} />
+              </div>
               
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
@@ -76,7 +89,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/20"
+                      className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
                     >
                       {tag}
                     </span>
@@ -87,7 +100,7 @@ const Projects = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="group/btn hover:bg-primary hover:text-white"
+                    className="group/btn hover:bg-primary hover:text-primary-foreground border-border hover:border-primary transition-all"
                     asChild
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -97,7 +110,7 @@ const Projects = () => {
                   </Button>
                   <Button
                     size="sm"
-                    className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
+                    className="bg-gradient-to-r from-primary to-accent hover:opacity-90 shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-glow)] transition-all"
                     asChild
                   >
                     <a href={project.live} target="_blank" rel="noopener noreferrer">
