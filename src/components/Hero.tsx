@@ -5,6 +5,7 @@ import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const roles = [
+    "Full-Stack Developer",
     "React Developer",
     "UI Engineer",
     "Problem Solver",
@@ -36,7 +37,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div className="animate-fade-in-up">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">
-            Hi, I'm <span className="gradient-text">Gaurav</span>
+            Hi, I'm <span className="gradient-text">Gaurav Pratap Singh</span>
           </h1>
           
           <div className="text-2xl sm:text-3xl md:text-4xl mb-8 h-12 flex items-center justify-center">
