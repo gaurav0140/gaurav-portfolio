@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Code2, Rocket, Users } from "lucide-react";
+import profile from "/src/Assets/gaurav.jpg";
 
 const About = () => {
   const highlights = [
@@ -37,7 +38,7 @@ const About = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-500 animate-glow" />
               <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-background shadow-[var(--shadow-large)]">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                  src={profile}
                   alt="Gaurav - Software Engineer"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />

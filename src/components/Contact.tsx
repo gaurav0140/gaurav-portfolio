@@ -53,10 +53,10 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
                   <a
-                    href="mailto:gaurav@example.com"
+                    href="mailto:singhgauravpratap645@gmail.com"
                     className="text-primary hover:underline"
                   >
-                    gaurav@example.com
+                    singhgauravpratap645@gmail.com
                   </a>
                 </div>
               </div>
@@ -70,12 +70,12 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-lg">LinkedIn</h3>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/gauravpratapsinghs/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    linkedin.com/in/gaurav
+                    linkedin.com/in/gauravpratapsinghs/
                   </a>
                 </div>
               </div>
@@ -89,12 +89,12 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-lg">GitHub</h3>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/gaurav0140"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    github.com/gaurav
+                    github.com/gaurav0140
                   </a>
                 </div>
               </div>
