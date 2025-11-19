@@ -88,7 +88,7 @@ const OpenSource = () => {
                 asChild
               >
                 <a
-                  href="https://github.com"
+                  href="https://github.com/gaurav0140/care_fe"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -41,7 +41,7 @@ const Hero = () => {
           </h1>
           
           <div className="text-2xl sm:text-3xl md:text-4xl mb-8 h-12 flex items-center justify-center">
-            <span className="text-muted-foreground mr-2">I'm a</span>
+            <span className="text-muted-foreground mr-2">I'm</span>
             <span className="gradient-text font-semibold animate-fade-in" key={currentRole}>
               {roles[currentRole]}
             </span>
@@ -72,7 +72,7 @@ const Hero = () => {
 
           <div className="flex justify-center space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/gaurav0140"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/60 hover:text-primary transition-colors hover:-translate-y-1 transform duration-300"
@@ -80,7 +80,7 @@ const Hero = () => {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/gauravpratapsinghs/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/60 hover:text-primary transition-colors hover:-translate-y-1 transform duration-300"
@@ -88,7 +88,7 @@ const Hero = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="mailto:gaurav@example.com"
+              href="mailto:singhgauravpratap645@gmail.com"
               className="text-foreground/60 hover:text-primary transition-colors hover:-translate-y-1 transform duration-300"
             >
               <Mail className="h-6 w-6" />
