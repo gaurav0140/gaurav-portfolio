@@ -12,7 +12,7 @@ const Footer = () => {
               © {currentYear} Gaurav. All rights reserved.
             </p>
             <p className="text-sm text-foreground/60 mt-1 flex items-center justify-center md:justify-start">
-              Built with VS Code using React & TypeScript
+              Built with VS Code using React & TypeScript.
             </p>
           </div>
 
